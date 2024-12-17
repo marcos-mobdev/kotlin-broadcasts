@@ -1,12 +1,11 @@
 package br.com.appforge.kotlinbroadcasts
 
-import android.app.NotificationManager
-import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.net.wifi.WifiManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import br.com.appforge.kotlinbroadcasts.data.receivers.MyBroadcastReceiver
 import br.com.appforge.kotlinbroadcasts.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

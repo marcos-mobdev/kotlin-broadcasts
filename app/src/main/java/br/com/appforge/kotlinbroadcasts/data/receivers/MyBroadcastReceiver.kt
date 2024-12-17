@@ -1,4 +1,4 @@
-package br.com.appforge.kotlinbroadcasts
+package br.com.appforge.kotlinbroadcasts.data.receivers
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -33,14 +33,13 @@ class MyBroadcastReceiver : BroadcastReceiver() {
             else-> ""
         }
 
-        Log.i("info_broadcast", "wifi: $wifiStatusMessage")
-        Log.i("info_broadcast", "battery: $batteryStatusMessage")
-
         if (batteryStatusMessage.isNotEmpty()) {
             Toast.makeText(context, batteryStatusMessage, Toast.LENGTH_SHORT).show()
+            Log.i("info_broadcast", "battery: $batteryStatusMessage")
         }
         if(wifiStatusMessage.isNotEmpty()){
             Toast.makeText(context, wifiStatusMessage, Toast.LENGTH_SHORT).show()
+            Log.i("info_broadcast", "wifi: $wifiStatusMessage")
         }
 
     }
